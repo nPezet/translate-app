@@ -37,16 +37,17 @@ export default function TestTranslateForm({ words }: { words: WordData[] }) {
           borderColor: "blue",
           borderWidth: "2px",
           padding: "40px 0px 40px 0px",
-          display: "flex",
         }}
       >
-        {wordData.map((wd, idx) => {
-          return (
-            <p key={`eng-wd-${idx}`} className={`w-[calc(100% - 40px)]`}>
-              <strong>{wd.english}</strong>
-            </p>
-          );
-        })}
+        {/* TODO Carousel
+          {wordData.map((wd, idx) => {
+            return (
+            );
+          })}
+        */}
+        <p>
+          <strong>{words[currentWordIndex].english}</strong>
+        </p>
       </div>
       <input
         style={{
@@ -56,6 +57,7 @@ export default function TestTranslateForm({ words }: { words: WordData[] }) {
           borderColor: "green",
           borderWidth: "2px",
           padding: "10px 10px 10px 10px",
+          textAlign: "center",
         }}
         type="text"
         onChange={(e) => setProposition(e.currentTarget.value)}

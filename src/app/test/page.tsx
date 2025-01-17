@@ -1,16 +1,18 @@
 import TestTranslateForm from "@/components/molecules/TestTranslateForm";
 import { WordData } from "@/utils/types";
 import { PrismaClient } from "@prisma/client";
+import { connection } from "next/server";
 
 const prisma = new PrismaClient();
 
 async function fetchData(): Promise<WordData[]> {
+  await connection();
   const productsCount = await prisma.words.count();
   const skip = Math.floor(Math.random() * productsCount);
 
   return await prisma.words.findMany({
-      take: 5,
-      skip: skip,
+    take: 10,
+    skip: skip,
   });
 }
 
@@ -24,7 +26,7 @@ export default async function TranslationPage() {
         textAlign: "center",
         padding: "20px",
         display: "flex",
-        height: "100vh",
+        height: "100svh",
         flexDirection: "column",
       }}
     >
