@@ -10,16 +10,10 @@ export default function TestTranslateProgressBar({
   wordData: WordData[];
 }) {
   return (
-    <div
-      style={{
-        background: "beige",
-        display: "flex",
-        justifyContent: "space-around",
-        padding: "5px",
-      }}
-    >
+    <div className="p-1 flex justify-around bg-theme-kaki rounded">
       {wordData.map((wd, idx) => (
         <span
+          className="rounded-full aspect-square w-2"
           key={`count-dot-${idx}`}
           style={{
             borderRadius: "50%",

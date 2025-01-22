@@ -30,14 +30,15 @@ export default function TestTranslateForm({ words }: { words: WordData[] }) {
     <>
       <TestTranslateProgressBar wordData={wordData} />
       <div
-        style={{
-          margin: "20px 0",
-          fontSize: "1.5rem",
-          borderRadius: "5px",
-          borderColor: "blue",
-          borderWidth: "2px",
-          padding: "40px 0px 40px 0px",
-        }}
+        // style={{
+        //   margin: "20px 0",
+        //   fontSize: "1.5rem",
+        //   borderRadius: "5px",
+        //   borderColor: "blue",
+        //   borderWidth: "2px",
+        //   padding: "40px 0px 40px 0px",
+        // }}
+        className="py-10 rounded my-5 text-xl bg-theme-turquoise text-theme-dark"
       >
         {/* TODO Carousel
           {wordData.map((wd, idx) => {
