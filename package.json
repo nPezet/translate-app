@@ -2,6 +2,9 @@
   "name": "english_vocab",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": ">= v20.18.2"
+  },
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
