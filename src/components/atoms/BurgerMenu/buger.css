@@ -1,0 +1,25 @@
+.burger > span {
+  background-color: theme("colors.theme-kaki");
+  height: theme("size.1");
+  transition: all 200ms ease;
+  opacity: 1;
+  transform: rotate(0) scaleX(1);
+  transform-origin: left;
+  border-radius: theme('size[0.5]');
+}
+
+.toggled-burger > span {
+  background-color: theme("colors.theme-dark");
+}
+
+.toggled-burger > span:first-child {
+  transform: rotate(45deg) scaleX(1.2);
+}
+
+.toggled-burger > span:nth-child(2) {
+    opacity: 0;
+}
+
+.toggled-burger > span:last-child {
+  transform: rotate(-45deg) scaleX(1.2);
+}

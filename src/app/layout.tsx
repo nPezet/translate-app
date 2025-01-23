@@ -1,10 +1,6 @@
-"use client";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import BurgerMenu from "@/components/atoms/BurgerMenu";
-import SideNav from "@/components/molecules/SideNav";
-import { useState } from "react";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,15 +22,11 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const [displayedSideNav, setDisplayedSideNav] = useState(false);
-
   return (
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-theme-dark text-theme-kaki relative`}
       >
-        <BurgerMenu handleToggle={() => setDisplayedSideNav((p) => !p)} />
-        <SideNav displayed={displayedSideNav} />
         {children}
       </body>
     </html>
