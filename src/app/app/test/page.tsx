@@ -20,16 +20,7 @@ export default async function TranslationPage() {
   const initialWordData = await fetchData();
 
   return (
-    <div
-      style={{
-        fontFamily: "Arial, sans-serif",
-        textAlign: "center",
-        padding: "20px",
-        display: "flex",
-        height: "100svh",
-        flexDirection: "column",
-      }}
-    >
+    <div className="flex flex-col h-svh p-5 pt-14 text-center">
       <TestTranslateForm words={initialWordData} />
     </div>
   );

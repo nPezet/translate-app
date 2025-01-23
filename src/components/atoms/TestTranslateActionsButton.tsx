@@ -27,14 +27,16 @@ export default function TestActionsButton({
           padding: "10px 20px",
           fontSize: "1rem",
           cursor: "pointer",
-          backgroundColor: displayAnswer ? "#8F9779" : "#568203",
-          color: displayAnswer ? "black" : "#fff",
+          // backgroundColor: displayAnswer ? "#8F9779" : "#568203",
+          // color: displayAnswer ? "black" : "#fff",
           border: "none",
           borderRadius: "5px",
           transition: "all 200ms",
           fontWeight: "bold",
         }}
-        className={`${displayAnswer ? "!-translate-y-full" : ""} translate-y-0`}
+        className={`${
+          displayAnswer ? "!-translate-y-full" : ""
+        } translate-y-0 bg-theme-yellow text-theme-dark rounded py-2 px-4 cursor-pointer`}
       >
         Submit
       </button>
@@ -68,14 +70,12 @@ export default function TestActionsButton({
         <button
           onClick={() => handleValidation(false)}
           style={{
-            padding: "10px 20px",
             fontSize: "1rem",
             cursor: "pointer",
             backgroundColor: "#7C0A02",
             color: "#fff",
             fontWeight: "bold",
             border: "none",
-            borderRadius: "5px",
             transitionDuration: "200",
             transitionProperty: "background-color color",
             flex: "1",
