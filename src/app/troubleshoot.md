@@ -38,3 +38,7 @@
 > This pushes the last element down, taking up the remaining available space under .centre-items.
 
 ## Use useState hook on main Layout component rendering metadata is not allowed
+
+## Margin collapse on a int CheckIcon.tsx
+
+- Maybe the display mode on a ?

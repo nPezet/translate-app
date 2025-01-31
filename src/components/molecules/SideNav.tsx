@@ -7,11 +7,17 @@ const links = [
   },
   {
     label: "📚 Vocabulary test",
-    route: "/app/test",
+    route: "/app/vocab_test",
   },
 ];
 
-export default function SideNav({ displayed }: { displayed: boolean }) {
+export default function SideNav({
+  displayed,
+  handleNav,
+}: {
+  displayed: boolean;
+  handleNav: () => void;
+}) {
   return (
     <div
       className={`absolute bg-black top-0 left-0 h-screen w-screen pointer-events-none ${
@@ -28,6 +34,7 @@ export default function SideNav({ displayed }: { displayed: boolean }) {
             key={`nav-link-${idx}`}
             href={l.route}
             className="text-theme-dark text-center bg-opacity-5 bg-theme-dark p-2 mx-2 rounded"
+            onClick={handleNav}
           >
             {l.label}
           </Link>

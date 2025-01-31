@@ -1,4 +1,4 @@
-import "./buger.css";
+import "./burger.css";
 
 export default function BurgerMenu({
   handleToggle,

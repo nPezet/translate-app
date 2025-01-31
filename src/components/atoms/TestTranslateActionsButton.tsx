@@ -10,76 +10,30 @@ export default function TestActionsButton({
   handleValidation,
 }: TestTranslateActionsButtonProps) {
   return (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        marginTop: "auto",
-        height: "54px",
-        overflow: "hidden",
-        rowGap: "10px",
-      }}
-    >
+    <div className="h-14 gap-y-3 overflow-hidden mt-auto flex flex-col">
       <button
         disabled={displayAnswer}
         onClick={handleSubmittedAnswer}
-        style={{
-          padding: "10px 20px",
-          fontSize: "1rem",
-          cursor: "pointer",
-          // backgroundColor: displayAnswer ? "#8F9779" : "#568203",
-          // color: displayAnswer ? "black" : "#fff",
-          border: "none",
-          borderRadius: "5px",
-          transition: "all 200ms",
-          fontWeight: "bold",
-        }}
         className={`${
           displayAnswer ? "!-translate-y-full" : ""
-        } translate-y-0 bg-theme-yellow text-theme-dark rounded py-2 px-4 cursor-pointer`}
+        } translate-y-0 bg-theme-yellow text-theme-dark rounded py-2 px-4 cursor-pointer text-lg transition-colors font-bold rounded`}
       >
         Submit
       </button>
       <div
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          columnGap: "10px",
-          transition: "all 200ms",
-        }}
-        className={`${displayAnswer ? "!-translate-y-full" : ""} translate-y-0`}
+        className={`${
+          displayAnswer ? "!-translate-y-full" : ""
+        } translate-y-0 flex justify-between gap-x-3 transition-transform`}
       >
         <button
           onClick={() => handleValidation(true)}
-          style={{
-            padding: "10px 20px",
-            fontSize: "1rem",
-            cursor: "pointer",
-            backgroundColor: "#568203",
-            fontWeight: "bold",
-            color: "#fff",
-            border: "none",
-            borderRadius: "5px",
-            transitionDuration: "200",
-            transitionProperty: "background-color color",
-            flex: "1",
-          }}
+          className="py-2 px-4 text-lg bg-theme-turquoise text-theme-kaki rounded flex-1 font-bold"
         >
           Correct
         </button>
         <button
           onClick={() => handleValidation(false)}
-          style={{
-            fontSize: "1rem",
-            cursor: "pointer",
-            backgroundColor: "#7C0A02",
-            color: "#fff",
-            fontWeight: "bold",
-            border: "none",
-            transitionDuration: "200",
-            transitionProperty: "background-color color",
-            flex: "1",
-          }}
+          className="py-2 px-4 text-lg bg-theme-red text-theme-kaki rounded flex-1 font-bold"
         >
           Wrong
         </button>
