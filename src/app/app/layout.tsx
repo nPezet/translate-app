@@ -16,7 +16,10 @@ export default function RootLayout({
         handleToggle={() => setDisplayedSideNav((p) => !p)}
         toggled={displayedSideNav}
       />
-      <SideNav displayed={displayedSideNav} />
+      <SideNav
+        displayed={displayedSideNav}
+        handleNav={() => setDisplayedSideNav(false)}
+      />
       {children}
     </>
   );

@@ -1,0 +1,59 @@
+.words-fields {
+    transition: flex-grow 700ms cubic-bezier(.47,.01,.21,1.58) 150ms;
+}
+
+.animate-fade {
+  opacity: 0;
+}
+
+.animate-shrink {
+    flex-grow: 0;
+}
+
+.submit-button {
+  width: 100%;
+  transition: width 400ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.validated-submit {
+  width: theme("size.10");
+  border-radius: 9999px;
+  animation: submit-confirmation-button 500ms cubic-bezier(0.075, 0.82, 0.165, 1) forwards 700ms;
+}
+
+.validated-submit path {
+  animation: submit-confirmation-check 3s cubic-bezier(0.075, 0.82, 0.165, 1) forwards 1000ms;
+  stroke: theme("colors.theme-dark");;
+}
+
+.validated-submit .validation-label {
+  font-size: xx-small;
+  animation: submit-confirmation-label 1s linear forwards 1s;
+}
+
+@keyframes submit-confirmation-button {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(2);
+  }
+}
+
+@keyframes submit-confirmation-check {
+  0% {
+    stroke-dashoffset: 200;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes submit-confirmation-label {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
