@@ -1,9 +1,5 @@
 import { WordData } from "@/utils/types";
 
-const correctColor = "#568203";
-const undoneColor = "#8F9779";
-const wrongColor = "#7C0A02";
-
 export default function TestTranslateProgressBar({
   wordData,
 }: {
